@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
         foreach (Waypoint pathfinder in path)
         {
             transform.position = pathfinder.transform.position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 

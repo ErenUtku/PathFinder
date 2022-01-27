@@ -16,7 +16,7 @@ public class Pathfinder : MonoBehaviour
     public List<Waypoint> GetPath()
     {
         LoadBlocks();
-        ColorStartAndEnd();
+        //ColorStartAndEnd();
         BreadthFirstSearch();
         CreatePath();
         return path;
@@ -96,11 +96,11 @@ public class Pathfinder : MonoBehaviour
 
     }
 
-    private void ColorStartAndEnd()
-    {
-        startWayppoint.SetTopColor(Color.green);
-        endWaypoint.SetTopColor(Color.red);
-    }
+    //private void ColorStartAndEnd()
+    //{
+    //    startWayppoint.SetTopColor(Color.green);
+    //    endWaypoint.SetTopColor(Color.red);
+    //}
 
     private void LoadBlocks()
     {
@@ -115,7 +115,7 @@ public class Pathfinder : MonoBehaviour
             else
             {
                 grid.Add(waypoint.GetGridPos(), waypoint);
-                waypoint.SetTopColor(Color.yellow);            
+                //waypoint.SetTopColor(Color.yellow);            
             }
         }
     }
