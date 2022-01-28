@@ -53,12 +53,13 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\EditorSnap.cs" />
     <Compile Include="Assets\Scripts\Waypoint.cs" />
     <Compile Include="Assets\Tower.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Pathfinder.cs" />
-    <Compile Include="Assets\EnemyDamage.cs" />
+    <Compile Include="Assets\EnemySpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

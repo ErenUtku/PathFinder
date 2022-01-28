@@ -15,11 +15,14 @@ public class Pathfinder : MonoBehaviour
     private List<Waypoint> path =new List<Waypoint>();
     public List<Waypoint> GetPath()
     {
-        LoadBlocks();
-        //ColorStartAndEnd();
-        BreadthFirstSearch();
-        CreatePath();
-        return path;
+        if (path.Count == 0)
+        {
+            LoadBlocks();
+            //ColorStartAndEnd();
+            BreadthFirstSearch();
+            CreatePath();
+        }
+        return path;       
     }
 
     Vector2Int[] directions =
