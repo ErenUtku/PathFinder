@@ -9,10 +9,10 @@ public class Pathfinder : MonoBehaviour
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     Queue<Waypoint> queue = new Queue<Waypoint>();
     bool isRunning = true;
+
     Waypoint searchCenter; //the current search
+    List<Waypoint> path =new List<Waypoint>();
 
-
-    private List<Waypoint> path =new List<Waypoint>();
     public List<Waypoint> GetPath()
     {
         if (path.Count == 0)
@@ -36,16 +36,22 @@ public class Pathfinder : MonoBehaviour
 
     private void CreatePath()
     {
-        path.Add(endWaypoint);
+        SetAsPath(endWaypoint);
 
         Waypoint previous = endWaypoint.exloredFrom;
         while (previous != startWayppoint)
         {
-            path.Add(previous);
+            SetAsPath(previous);
             previous = previous.exloredFrom;
         }
-        path.Add(startWayppoint);
+        SetAsPath(startWayppoint);
         path.Reverse();
+    }
+
+    private void SetAsPath(Waypoint waypoint)
+    {
+        path.Add(waypoint);
+        waypoint.isPlaceable = false;
     }
 
     private void BreadthFirstSearch()
