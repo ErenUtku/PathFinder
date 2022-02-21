@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    
+    [SerializeField] float movementPeriod = 0.5f;
+    [SerializeField] ParticleSystem goalParticle;
+
     void Start()
     {
         Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
@@ -20,11 +22,12 @@ public class EnemyMovement : MonoBehaviour
             transform.position = pathfinder.transform.position;
             yield return new WaitForSeconds(0.5f);
         }
+        SelfDestruct();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void SelfDestruct()
     {
-        
+        var vfx = Instantiate(goalParticle, transform.position, Quaternion.identity);
+        vfx.Play();
+        Destroy(gameObject);
     }
 }

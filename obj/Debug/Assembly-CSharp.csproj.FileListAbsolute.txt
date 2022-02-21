@@ -304,3 +304,7 @@ D:\Unity\repos\RealmRush\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cach
 D:\Unity\repos\RealmRush\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 D:\Unity\repos\RealmRush\obj\Debug\Assembly-CSharp.dll
 D:\Unity\repos\RealmRush\obj\Debug\Assembly-CSharp.pdb
+D:\Unity\repos\RealmRush\Temp\Bin\Debug\Unity.Postprocessing.Editor.dll
+D:\Unity\repos\RealmRush\Temp\Bin\Debug\Unity.Postprocessing.Runtime.dll
+D:\Unity\repos\RealmRush\Temp\Bin\Debug\Unity.Postprocessing.Editor.pdb
+D:\Unity\repos\RealmRush\Temp\Bin\Debug\Unity.Postprocessing.Runtime.pdb
